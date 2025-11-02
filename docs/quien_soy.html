@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora las obras de arte únicas de Lorena Minoretti, artista especializada en pintura contemporánea y abstracción.">
+    <meta name="keywords" content="arte, pintura, Lorena Minoretti, obras originales, arte contemporáneo">
+    <title>Lorena Minoretti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="artist-name">Lorena Minoretti Art</h1>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">Obras</a>
+                <a href="quien_soy.html">Sobre Mí</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="navbar">
+        <a href="index.html">Obras</a>
+        <a href="quien_soy.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+
+
+        <section class="about-section" id="sobre-mi">
+            <div class="container">
+                <h2 class="section-title">Sobre Lorena Minoretti</h2>
+                <div class="about-content">
+                  <p>
+                    Podría comenzar escribiendo sobre listados de estudios, experiencias y logros, pero esto no suele crear mucha conexión entre las personas. Prefiero compartir aquí, alguno de mis pensamientos sobre mi arte e inspiración: la Madre Naturaleza.
+                    Cuando la mirada errante de un artista se posa sobre lo que se busca representar, se comienza a generar un vínculo íntimo con lo observado y luego representado. Hay una fusión con la imagen que despierta un minucioso interés por por aquello que inspira la obra artística.
+                    Sucede entonces, que dibujos y acuarelas que parecían obras aisladas destinadas al olvido, toman cuerpo e impulso para generar esa empatía que precede a la inquietud del querer comprender más y más.
+                    Los caminos van y vienen, y así, con la misma intensidad con la que el arte me llevó al mundo natural, el mundo natural vuelve a mi a través del arte.
+                  </p>           
+                  <p>
+                    Quien soy?
+                    Soy una artista maravillada por la gran Obra Maestra del Universo que nos da Vida.
+                  </p>         
+                  <a href="https://carasycaretas.org.ar/2021/01/29/quiero-crear-una-conexion-entre-especies/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Leer entrevista</a>
+
+                <div class="action-buttons">
+                        <!-- <img src="img/carrusel1.png" alt="Fotografía de Lorena Minoretti en su estudio" class="mx-auto" loading="lazy"> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Lorena Minoretti</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/lorena_minoretti_art" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://wa.me/5491167852021" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar modal">×</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("navbar");
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", nav.classList.contains("open"));
+      });
+    });
+  </script>
+</body>
+</html>
