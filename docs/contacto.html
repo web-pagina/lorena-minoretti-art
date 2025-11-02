@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a Lorena Minoretti - Artista especializada en pintura contemporánea y arte ambiental.">
+    <meta name="keywords" content="contacto, Lorena Minoretti, artista, pintura, arte contemporáneo">
+    <title>Contacto - Lorena Minoretti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_contacto.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="artist-name">Lorena Minoretti Art</h1>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">Obras</a>
+                <a href="quien_soy.html">Sobre Mí</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="navbar">
+        <a href="index.html">Obras</a>
+        <a href="quien_soy.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="contact-title">Conectemos</h1>
+                <p class="contact-subtitle">Me encantaría conocer tu interés por el arte y la naturaleza. No dudes en contactarme para cualquier consulta sobre mis obras o para compartir ideas sobre arte y conservación.</p>
+            </div>
+        </section>
+
+        <!-- Contact Cards Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-cards">
+                    <!-- Instagram Card -->
+                    <div class="contact-card instagram-card">
+                        <div class="contact-icon instagram-icon">
+                            📷
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Seguí mi proceso creativo y descubrí nuevas obras en mi perfil de Instagram</p>
+                        <a href="https://instagram.com/lorena_minoretti_art" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            @lorena_minoretti_art
+                        </a>
+                    </div>
+
+                    <!-- WhatsApp Card -->
+                    <div class="contact-card whatsapp-card">
+                        <div class="contact-icon whatsapp-icon">
+                            💬
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>¿Te interesa alguna obra? Escribime directamente por WhatsApp y conversemos</p>
+                        <a href="https://wa.me/5491167852021" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            Enviar mensaje
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="contact-quote">
+            <div class="container">
+                <blockquote class="quote-text">
+                    "Quiero crear una conexión entre especies. Un llamado de ayuda de los seres no humanos hacia la especie humana, que no los mira y que cada vez se aleja más del mundo natural del que depende."
+                </blockquote>
+                <p class="quote-author">— Lorena Minoretti</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Lorena Minoretti</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/lorena_minoretti_art" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://wa.me/5491167852021" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const nav = document.getElementById("navbar");
+            if (toggle && nav) {
+                toggle.addEventListener("click", () => {
+                    nav.classList.toggle("open");
+                    toggle.setAttribute("aria-expanded", nav.classList.contains("open"));
+                });
+            }
+        });
+    </script>
+</body>
+</html>
