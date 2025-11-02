@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora las obras de arte únicas de Lorena Minoretti, artista especializada en pintura contemporánea y abstracción.">
+    <meta name="keywords" content="arte, pintura, Lorena Minoretti, obras originales, arte contemporáneo">
+    <title>Lorena Minoretti</title>
+    
+    <!-- ⚠️ CAMBIO: agregado base href para GitHub Pages -->
+     <base href="./">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!-- ⚠️ CAMBIO: rutas relativas ahora funcionan gracias al <base> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="artist-name">Lorena Minoretti Art</h1>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+        <div class="container">
+            <div class="nav-links">
+                <a href="#obras">Obras</a>
+                <a href="quien_soy.html">Sobre Mí</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="navbar">
+        <a href="#obras">Obras</a>
+        <a href="quien_soy.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Swiper -->
+        <section class="hero-section">
+            <div class="container">
+                <h2 class="hero-title">Arte & Naturaleza:</h2>
+                <h4 class="hero-subtitle">La inspiración sublime que llena mi arte de magia, luz y admiración</h4>
+                
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- ⚠️ CAMBIO: rutas de imágenes ahora son relativas gracias al <base> -->
+                        <div class="swiper-slide">
+                            <img src="img/carrusel1.png" alt="Obra abstracta en tonos azules por Lorena Minoretti" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/carrusel2.png" alt="Pintura contemporánea con colores vibrantes" loading="lazy">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/carrusel3.png" alt="Ilustración artística de Lorena Minoretti" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section class="works-section" id="obras">
+            <div class="container">
+                <h2 class="section-title">Obras</h2>
+                
+                <!-- Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="Todas">Todas</button>
+                    <button class="filter-btn" data-filter="Obra pictórica">Obra Pictórica</button>
+                    <button class="filter-btn" data-filter="Acuarelas e Ilustraciones">Acuarelas e Ilustraciones</button>
+                    <button class="filter-btn" data-filter="Libros & Postales">Libros & Postales</button>
+                    <button class="filter-btn" data-filter="Baúles & Deco">Baúles & Deco</button>
+                    <button class="filter-btn" data-filter="TerrAqEcoJuego">TerrAqEcoJuego</button>
+                    <button class="filter-btn" data-filter="Prints">Prints</button>
+                </div>
+
+                <!-- Works Gallery -->
+                <div class="gallery" id="obras-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Lorena Minoretti</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/lorena_minoretti_art" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://wa.me/5491167852021" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar modal">×</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- ⚠️ CAMBIO: agregado cache buster en el script -->
+    <script src="index.js?v=20250102"></script>
+</body>
+</html>
