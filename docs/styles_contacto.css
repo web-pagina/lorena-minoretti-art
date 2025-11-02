@@ -1,0 +1,258 @@
+
+/* ===== ESTILOS ESPECÃƒÂFICOS PARA LA PÃƒÂGINA DE CONTACTO ===== */
+
+/* Hero Section */
+.contact-hero {
+    background: white;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.contact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.contact-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 0;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #f9f9f9;
+    padding: 80px 0;
+    min-height: 60vh;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Cards - ESPECÃƒÂFICOS PARA CONTACTO */
+.contact-card {
+    background: white;
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    /* Resetear cualquier estilo heredado */
+    height: auto;
+    max-width: none;
+    display: block;
+    flex-direction: initial;
+    align-items: initial;
+    justify-content: initial;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Icons */
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: all 0.3s ease;
+}
+
+.instagram-icon {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+.whatsapp-icon {
+    background: #25d366;
+    color: white;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+/* Contact Card Text */
+.contact-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.contact-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+/* Contact Links */
+.contact-link {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.contact-link:hover {
+    background: #333;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.instagram-card .contact-link:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: transparent;
+}
+
+.whatsapp-card .contact-link:hover {
+    background: #25d366;
+    border-color: #25d366;
+}
+
+/* Quote Section */
+.contact-quote {
+    background: white;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    color: #555;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.quote-author {
+    color: #333;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 50px 0;
+    }
+
+    .contact-title {
+        font-size: 1.8em;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1em;
+        padding: 0 20px;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-cards {
+        gap: 30px;
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contact-card h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-card p {
+        font-size: 0.95em;
+    }
+
+    .quote-text {
+        font-size: 1.1em;
+        padding: 0 20px;
+    }
+
+    .contact-quote {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 40px 0;
+    }
+
+    .contact-title {
+        font-size: 1.5em;
+    }
+
+    .contact-subtitle {
+        font-size: 1em;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .contact-card {
+        padding: 25px 15px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .contact-link {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .quote-text {
+        font-size: 1em;
+    }
+
+    .contact-quote {
+        padding: 40px 0;
+    }
+}
