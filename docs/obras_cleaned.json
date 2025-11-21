@@ -12,7 +12,7 @@
     ],
     "price": "Consultar precio",
     "description": "Seis de las siete especies de tortugas marinas que existen en el mundo. Obra en tríptico que representa la belleza y fragilidad de estos guardianes del océano.",
-    "images": ["https://picsum.photos/seed/vuelos1/800/600", "https://picsum.photos/seed/vuelos2/800/600", "https://picsum.photos/seed/vuelos3/800/600"]
+    "images": ["vuelos1.png", "https://picsum.photos/seed/vuelos2/800/600", "https://picsum.photos/seed/vuelos3/800/600"]
   },
   {
     "title": "Pequeños Emperadores",
@@ -39,7 +39,7 @@
     "category": "Obra pictórica",
     "tipo_original": "Obra pictórica",
     "tecnica": "Acrílico sobre tela en bastidor. Enmarcado.",
-    "size": "100 cm x 120 cm",
+    "size": "Obra: 100 cm x 120 cm | Con marco: 136 cm x 156 cm",
     "price": "Consultar precio",
     "description": "Focas bebés sobre el hielo ártico. Una obra que captura la ternura de la vida salvaje.",
     "images": ["https://picsum.photos/seed/cachorros1/800/600", "https://picsum.photos/seed/cachorros2/800/600"]
@@ -49,7 +49,7 @@
     "category": "Obra pictórica",
     "tipo_original": "Obra pictórica",
     "tecnica": "Acrílico sobre tela en bastidor",
-    "size": "100 cm x 120 cm",
+    "size": "Obra: 100 cm x 120 cm | Con marco: 136 cm x 152 cm",
     "price": "Consultar precio",
     "description": "Ballenas majestuosas navegando las aguas profundas, símbolos de la grandeza del océano.",
     "images": ["https://picsum.photos/seed/guardianes1/800/600", "https://picsum.photos/seed/guardianes2/800/600"]
@@ -83,7 +83,7 @@
     "category": "Acuarelas e Ilustraciones",
     "tipo_original": "Ilustración",
     "tecnica": "Ilustración a tinta y pluma",
-    "size": "61 cm x 45 cm",
+    "size": "61 cm x 45 cm de alto",
     "price": "USD 150",
     "description": "Dos lechuzas de campanario en detalle preciso. Técnica mixta.",
     "images": ["https://picsum.photos/seed/owls1/800/600"]
@@ -93,7 +93,7 @@
     "category": "Acuarelas e Ilustraciones",
     "tipo_original": "Acuarela",
     "tecnica": "Acuarela sobre papel",
-    "size": "61 cm x 45 cm",
+    "size": "61 cm x 45 cm de alto",
     "price": "USD 170",
     "description": "Versión a color de las lechuzas, con tonos cálidos y naturales.",
     "images": ["https://picsum.photos/seed/owlscolor/800/600"]
@@ -129,7 +129,7 @@
     "images": ["https://picsum.photos/seed/manzanas/800/600"]
   },
   {
-    "title": "Amistad Animal",
+    "title": "Amistad",
     "category": "Acuarelas e Ilustraciones",
     "tipo_original": "Acuarela",
     "tecnica": "Acuarela y tinta",
@@ -159,7 +159,7 @@
     "images": ["https://picsum.photos/seed/bote/800/600"]
   },
   {
-    "title": "Escena de Playa",
+    "title": "Playa",
     "category": "Acuarelas e Ilustraciones",
     "tipo_original": "Acuarela",
     "tecnica": "Acuarela",
@@ -211,35 +211,5 @@
     "price": 5000,
     "description": "Colección de 10 postales con ilustraciones de fauna marina. Impresas en papel de alta calidad.",
     "images": ["https://picsum.photos/seed/postales1/800/600", "https://picsum.photos/seed/postales2/800/600"]
-  },
-  {
-    "title": "Baúl Decorado 'Océano'",
-    "category": "Baúles & Deco",
-    "tipo_original": "Objeto decorativo",
-    "tecnica": "Madera pintada a mano con acrílicos",
-    "size": "50 cm x 30 cm x 35 cm",
-    "price": 45000,
-    "description": "Baúl de madera decorado con motivos marinos. Pieza única pintada a mano.",
-    "images": ["https://picsum.photos/seed/baul1/800/600", "https://picsum.photos/seed/baul2/800/600"]
-  },
-  {
-    "title": "Print 'Ballenas al Atardecer'",
-    "category": "Prints",
-    "tipo_original": "Réplica",
-    "tecnica": "Impresión digital de alta calidad sobre papel fotográfico",
-    "size": "40 cm x 60 cm",
-    "price": 15000,
-    "description": "Réplica de obra original. Ideal para decoración de espacios.",
-    "images": ["https://picsum.photos/seed/print1/800/600"]
-  },
-  {
-    "title": "Print 'Pingüinos en Familia'",
-    "category": "Prints",
-    "tipo_original": "Réplica",
-    "tecnica": "Impresión giclée",
-    "size": "50 cm x 70 cm",
-    "price": 18000,
-    "description": "Impresión de alta fidelidad de la obra original.",
-    "images": ["https://picsum.photos/seed/print2/800/600"]
   }
 ]
