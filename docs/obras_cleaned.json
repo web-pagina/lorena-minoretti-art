@@ -22,7 +22,7 @@
     "size": "120 cm x 90 cm",
     "price": "Consultar precio",
     "description": "Pingüinos Emperador en su hábitat natural. Una celebración de la vida en los ambientes más extremos del planeta.",
-    "images": ["https://picsum.photos/seed/emperador1/800/600", "https://picsum.photos/seed/emperador2/800/600"]
+    "images": ["emperador3.png"]
   },
   {
     "title": "Miradas desde la Oscuridad",
@@ -62,7 +62,7 @@
     "size": "80 cm x 90 cm",
     "price": "Consultar precio",
     "description": "Una representación emotiva del vínculo entre madre e hijo en el mundo marino.",
-    "images": ["https://picsum.photos/seed/aletas1/800/600"]
+    "images": ["abrazo1.png", "abrazo2.png"]
   },
   {
     "title": "Familia de Emperadores",
@@ -76,7 +76,7 @@
     ],
     "price": "Consultar precio",
     "description": "Díptico de Pingüinos Emperador en familia, mostrando el cuidado parental en la Antártida.",
-    "images": ["https://picsum.photos/seed/familia1/800/600", "https://picsum.photos/seed/familia2/800/600"]
+    "images": ["emperador1.png", "emperador2.png"]
   },
   {
     "title": "Two Barn Owls",
@@ -109,14 +109,14 @@
     "images": ["https://picsum.photos/seed/mono1/800/600"]
   },
   {
-    "title": "Búho Nocturno",
+    "title": "Búho",
     "category": "Acuarelas e Ilustraciones",
     "tipo_original": "Acuarela",
     "tecnica": "Acuarela",
     "size": "24 cm x 32 cm",
     "price": "USD 50",
     "description": "Búho en tonos oscuros y místicos.",
-    "images": ["https://picsum.photos/seed/buho1/800/600"]
+    "images": ["buho1.png", "buho2.png"]
   },
   {
     "title": "Manzanas",
@@ -126,7 +126,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 60",
     "description": "Naturaleza muerta con manzanas rojas y verdes.",
-    "images": ["https://picsum.photos/seed/manzanas/800/600"]
+    "images": ["manzanas1.png", "manzanas2.png"]
   },
   {
     "title": "Amistad",
@@ -146,7 +146,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 55",
     "description": "Un ave exótica en tonos azules vibrantes.",
-    "images": ["https://picsum.photos/seed/aveazul/800/600"]
+    "images": ["aveazul1.png", "aveazul2.png"]
   },
   {
     "title": "Bote Aguamarina",
@@ -176,7 +176,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 25",
     "description": "Faro costero guiando a los navegantes.",
-    "images": ["https://picsum.photos/seed/faro/800/600"]
+    "images": ["faro1.png", "faro2.png"]
   },
   {
     "title": "TerrAq EcoJuego",
