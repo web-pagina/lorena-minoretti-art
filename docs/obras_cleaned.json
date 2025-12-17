@@ -12,7 +12,7 @@
       { "label": "Bastidor C", "size": "100 cm x 150 cm" }
     ],
     "price": "Consultar precio",
-    "description": "Seis de las siete especies de tortugas marinas que existen en el mundo. Obra en tríptico que representa la belleza y fragilidad de estos guardianes del océano.",
+    "description": "Seis de las siete especies de tortugas marinas que existen están amenazadas, tres de ellas en forma crítica. Cómo protegerse con sólo un abrazo de aletas?",
     "images": ["vuelos1.png"]
   },
   {
@@ -22,7 +22,6 @@
     "tecnica": "Acrílico sobre tela con bastidor.",
     "size": "120 cm x 90 cm",
     "price": "Consultar precio",
-    "description": "Pingüinos Emperador en su hábitat natural. Una celebración de la vida en los ambientes más extremos del planeta.",
     "images": ["emperador3.png"]
   },
   {
@@ -32,7 +31,6 @@
     "tecnica": "Acrílico sobre tela en bastidor",
     "size": "120 cm x 120 cm",
     "price": "Consultar precio",
-    "description": "Una exploración de las profundidades marinas y sus habitantes misteriosos.",
     "images": ["miradas1.png"]
   },
   {
@@ -42,7 +40,6 @@
     "tecnica": "Acrílico sobre tela en bastidor. Enmarcado.",
     "size": "Obra: 100 cm x 120 cm | Con marco: 136 cm x 156 cm",
     "price": "Consultar precio",
-    "description": "Focas bebés sobre el hielo ártico. Una obra que captura la ternura de la vida salvaje.",
     "images": ["cachorros1.png"]
   },
   {
@@ -52,7 +49,6 @@
     "tecnica": "Acrílico sobre tela en bastidor",
     "size": "Obra: 100 cm x 120 cm | Con marco: 136 cm x 152 cm",
     "price": "Consultar precio",
-    "description": "Ballenas majestuosas navegando las aguas profundas, símbolos de la grandeza del océano.",
     "images": ["guardian1.png"]
   },
   {
@@ -62,7 +58,6 @@
     "tecnica": "Acrílico sobre tela",
     "size": "80 cm x 90 cm",
     "price": "Consultar precio",
-    "description": "Una representación emotiva del vínculo entre madre e hijo en el mundo marino.",
     "images": ["abrazo1.png"]
   },
   {
@@ -76,7 +71,7 @@
       { "label": "Panel Derecho", "size": "50 cm x 120 cm" }
     ],
     "price": "Consultar precio",
-    "description": "Díptico de Pingüinos Emperador en familia, mostrando el cuidado parental en la Antártida.",
+    "description": "Díptico de dos Pingüinos Emperador.",
     "images": ["emperador1.png", "emperador2.png"]
   },
   {
@@ -86,7 +81,7 @@
     "tecnica": "Ilustración a tinta y pluma",
     "size": "61 cm x 45 cm de alto",
     "price": "USD 150",
-    "description": "Dos lechuzas de campanario en detalle preciso. Técnica mixta.",
+    "description": "Ilustración de dos lechuzas en blanco y negro.",
     "images": ["owls2.png"]
   },
   {
@@ -96,7 +91,7 @@
     "tecnica": "Acuarela sobre papel",
     "size": "61 cm x 45 cm de alto",
     "price": "USD 170",
-    "description": "Versión a color de las lechuzas, con tonos cálidos y naturales.",
+    "description": "Versión a color de la ilustración de lechuzas.",
     "images": ["colouredowl1.png"]
   },
   {
@@ -106,7 +101,6 @@
     "tecnica": "Acuarela sobre papel",
     "size": "24 cm x 32 cm",
     "price": "USD 80",
-    "description": "Retrato expresivo de un primate en su hábitat natural.",
     "images": ["mono1.png"]
   },
   {
@@ -116,7 +110,6 @@
     "tecnica": "Acuarela",
     "size": "24 cm x 32 cm",
     "price": "USD 50",
-    "description": "Búho en tonos oscuros y místicos.",
     "images": ["buho1.png"]
   },
   {
@@ -126,7 +119,6 @@
     "tecnica": "Acuarela",
     "size": "24 cm x 32 cm",
     "price": "USD 60",
-    "description": "Naturaleza muerta con manzanas rojas y verdes.",
     "images": ["manzanas1.png"]
   },
   {
@@ -136,7 +128,6 @@
     "tecnica": "Acuarela y tinta",
     "size": "24 cm x 32 cm",
     "price": "USD 50",
-    "description": "Dos animales en un momento de conexión especial.",
     "images": ["amistad1.png"]
   },
   {
@@ -146,7 +137,6 @@
     "tecnica": "Acuarela",
     "size": "24 cm x 32 cm",
     "price": "USD 55",
-    "description": "Un ave exótica en tonos azules vibrantes.",
     "images": ["aveazul1.png"]
   },
   {
@@ -156,7 +146,6 @@
     "tecnica": "Acuarela",
     "size": "24 cm x 32 cm",
     "price": "USD 30",
-    "description": "Pequeño bote flotando en aguas cristalinas.",
     "images": ["bote1.png"]
   },
   {
@@ -166,7 +155,6 @@
     "tecnica": "Acuarela",
     "size": "24 cm x 32 cm",
     "price": "USD 20",
-    "description": "Vista costera con arena y mar.",
     "images": ["playa1.png"]
   },
   {
@@ -176,7 +164,6 @@
     "tecnica": "Acuarela y tinta",
     "size": "24 cm x 32 cm",
     "price": "USD 25",
-    "description": "Faro costero guiando a los navegantes.",
     "images": ["faro1.png"]
   },
   {
@@ -185,7 +172,7 @@
     "tipo_original": "Juego educativo",
     "tecnica": "Juego de mesa",
     "size": "Caja: 30 cm x 30 cm x 8 cm",
-    "price": 90000,
+    "price": "ARS 90000",
     "description": "Juego de mesa de estrategia sobre especies y medioambiente. Con ilustraciones dibujadas íntegramente a mano, su diseño y textos sobre cuestiones ambientales del planeta. Este juego de mesa ha obtenido la Mención al Sello Buen Diseño argentino.",
     "images": ["terraq1.png", "terraq2.png", "terraq3.png", "terraq4.png", "terraq5.png"],
     "raw": {
@@ -194,14 +181,19 @@
     }
   },
   {
-    "title": "Un Libro de Búhos y Lechuzas",
-    "category": "Libros & Postales",
-    "tipo_original": "Libro artístico",
-    "tecnica": "Libro ilustrado",
-    "size": "32 cm x 24 cm",
-    "price": "USD 70",
-    "description": "Encuadernación a discos para trabajar las hojas en forma independiente. Impreso en papel Chambril 225 gramos. Prints de ilustraciones y acuarelas hechas a mano. 64 páginas (32 hojas), incluye dos sobres de hojas a color, varias postales, señaladores e ilustración original de la autora. Libro para ilustrar, pintar y escribir creando un espacio personal para el propio arte.",
-    "images": ["buhosylech1.png"]
+  "title": "Un Libro de Búhos y Lechuzas",
+  "category": "Libros & Postales",
+  "tipo_original": "Libro artístico",
+  "tecnica": "Libro ilustrado",
+  "size": "32 cm x 24 cm",
+  "price": "USD 70",
+  "description": "Libro para ilustrar, pintar y escribir creando un espacio personal para el propio arte.",
+  "features": [
+  "64 páginas (32 hojas)",
+  "Papeles Chambril 225 g",
+  "Incluye postales y señaladores"
+  ],
+  "images": ["buhosylech1.png"]
   },
   {
     "title": "Pack de Postales",
@@ -210,7 +202,7 @@
     "tecnica": "Impresión digital de acuarelas originales",
     "size": "15 cm x 10 cm c/u",
     "price": 5000,
-    "description": "Colección de 10 postales con ilustraciones de fauna marina. Impresas en papel de alta calidad.",
+    "description": "Colección de 10 postales con ilustraciones de fauna marina. Impresión Print sobre papal 225 gramos chambril.",
     "images": ["postal1.png", "postal2.png", "postal3.png", "postal4.png", "postal5.png", "postal6.png"]
   }
 ]

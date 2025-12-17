@@ -333,50 +333,89 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
     } else if (cat === "Libros & Postales") {
-      const isLibro = obra.tipo_original && String(obra.tipo_original).toLowerCase().includes("libro");
-      if (isLibro) {
-        detailsHtml = `
-          <div class="obra-details">
-            ${renderSizeBlock(obra)}
-            ${row("Precio", formatPrice(obra.price))}
-            ${row("Descripción", obra.description)}
-          </div>
-          <a class="btn-whatsapp" href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesa el libro: " + obra.title)}" target="_blank">Consultar por WhatsApp</a>
-        `;
-      } else {
-        detailsHtml = `
-          <div class="obra-details">
-            ${row("Descripción", obra.description)}
-            ${row("Precio", formatPrice(obra.price))}
-            ${renderSizeBlock(obra)}
-          </div>
-          <p style="font-style:italic; margin-top:10px;">Las postales se venden en packs y se coordina selección por WhatsApp.</p>
-          <a class="btn-whatsapp" href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesan las postales: " + obra.title)}" target="_blank">Consultarme por packs</a>
-        `;
-      }
-    } else {
-      detailsHtml = `
-        <div class="obra-details">
-          ${row("Técnica", obra.tecnica)}
-          ${renderSizeBlock(obra)}
-          ${row("Precio", formatPrice(obra.price))}
-        </div>
-        ${obra.description ? `<p class="obra-description">${escapeHtml(obra.description)}</p>` : ""}
-        <a class="btn-whatsapp" href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesa la obra: " + obra.title)}" target="_blank">Consultar por WhatsApp</a>
-      `;
-    }
+  const isLibro = obra.tipo_original && String(obra.tipo_original).toLowerCase().includes("libro");
 
-    return `
-      <div class="modal-card">
-        ${sliderSection}
-        <div class="modal-text">
-          ${titleHtml}
-          ${detailsHtml}
-        </div>
+  // Render descripción como string (si existe y no es array)
+  const descriptionHtml =
+    obra.description && !Array.isArray(obra.description)
+      ? `<p class="obra-description">${escapeHtml(obra.description)}</p>`
+      : "";
+
+  // Render descripción si es array de párrafos
+  const descriptionArrayHtml =
+    Array.isArray(obra.description)
+      ? obra.description.map(p => `<p class="obra-description">${escapeHtml(p)}</p>`).join("")
+      : "";
+
+  // Render features si existen (lista)
+  const featuresHtml =
+    obra.features && obra.features.length
+      ? `
+        <ul class="obra-features">
+          ${obra.features.map(f => `<li>${escapeHtml(f)}</li>`).join("")}
+        </ul>
+      `
+      : "";
+
+  if (isLibro) {
+    detailsHtml = `
+      <div class="obra-details">
+        ${renderSizeBlock(obra)}
+        ${row("Precio", formatPrice(obra.price))}
       </div>
+
+      ${featuresHtml}
+      ${descriptionHtml}
+      ${descriptionArrayHtml}
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesa el libro: " + obra.title)}"
+        target="_blank">Consultar por WhatsApp</a>
+    `;
+  } else {
+    // Para postales u otros ítems dentro de esta categoría
+    detailsHtml = `
+      <div class="obra-details">
+        ${descriptionHtml}
+        ${descriptionArrayHtml}
+        ${row("Precio", formatPrice(obra.price))}
+        ${renderSizeBlock(obra)}
+      </div>
+
+      <p style="font-style:italic; margin-top:10px;">
+        Las postales se venden en packs y se coordina selección por WhatsApp.
+      </p>
+
+      <a class="btn-whatsapp"
+        href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesan las postales: " + obra.title)}"
+        target="_blank">Consultarme por packs</a>
     `;
   }
 
+} else {
+  // resto de categorías (mantener como tenías)
+  detailsHtml = `
+    <div class="obra-details">
+      ${row("Técnica", obra.tecnica)}
+      ${renderSizeBlock(obra)}
+      ${row("Precio", formatPrice(obra.price))}
+    </div>
+    ${obra.description ? `<p class="obra-description">${escapeHtml(obra.description)}</p>` : ""}
+    <a class="btn-whatsapp" href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesa la obra: " + obra.title)}" target="_blank">Consultar por WhatsApp</a>
+  `;
+}
+
+// ------ ESTE RETURN VA SOLO UNA VEZ, AL FINAL DE LA FUNCIÓN ------
+return `
+  <div class="modal-card">
+    ${sliderSection}
+    <div class="modal-text">
+      ${titleHtml}
+      ${detailsHtml}
+    </div>
+  </div>
+`;
+  }
   /* ----------------- Modal setup ----------------- */
   function setupModal() {
     const contenedor = document.getElementById("obras-container");
