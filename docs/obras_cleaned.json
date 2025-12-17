@@ -189,8 +189,8 @@
     "description": "Juego de mesa de estrategia sobre especies y medioambiente. Con ilustraciones dibujadas íntegramente a mano, su diseño y textos sobre cuestiones ambientales del planeta. Este juego de mesa ha obtenido la Mención al Sello Buen Diseño argentino.",
     "images": ["terraq1.png", "terraq2.png", "terraq3.png"],
     "raw": {
-      "Instagram": "https://www.instagram.com/terraqecojuego/",
-      "YouTube": "https://www.youtube.com/watch?v=ejemplo"
+      "Instagram": "https://www.instagram.com/terraq_eco_juego",
+      "YouTube": "https://www.youtube.com/watch?v=4LfXPcSGERM&t=443s"
     }
   },
   {
@@ -204,13 +204,13 @@
     "images": ["buhosylech1.png"]
   },
   {
-    "title": "Pack de Postales Marinas",
+    "title": "Pack de Postales",
     "category": "Libros & Postales",
     "tipo_original": "Postales",
     "tecnica": "Impresión digital de acuarelas originales",
     "size": "15 cm x 10 cm c/u",
     "price": 5000,
     "description": "Colección de 10 postales con ilustraciones de fauna marina. Impresas en papel de alta calidad.",
-    "images": ["https://picsum.photos/seed/postales1/800/600", "https://picsum.photos/seed/postales2/800/600"]
+    "images": ["postal1.png", "postal2.png", "postal3.png", "postal4.png", "postal5.png", "postal6.png"]
   }
 ]
