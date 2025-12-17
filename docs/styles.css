@@ -774,11 +774,6 @@ body {
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
-.btn-whatsapp:before {
-  content: "ðŸ’¬";
-  font-size: 1.2em;
-}
-
 /* Responsive para el modal */
 @media (max-width: 768px) {
   .modal-content {
