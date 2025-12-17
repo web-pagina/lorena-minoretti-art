@@ -175,7 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cont.innerHTML = `
         <div style="text-align:center;padding:60px 20px;color:#666;grid-column:1/-1;">
           <h3 style="margin-bottom:10px;">No hay obras disponibles</h3>
-          <p>Verifica que el archivo JSON esté correctamente cargado.</p>
         </div>`;
       return;
     }
