@@ -459,4 +459,141 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(`✅ Aplicación lista con ${obras.length} obras`);
     console.log("💡 Tip: usa window.currentObras en consola para inspeccionar datos");
   })();
+
+  /* ----------------- Lightbox fullscreen ----------------- */
+(function setupLightboxModule() {
+  // crear DOM del lightbox y añadirlo al body
+  const lb = document.createElement("div");
+  lb.className = "lightbox-overlay";
+  lb.innerHTML = `
+    <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button class="lightbox-close" aria-label="Cerrar">✕</button>
+      <button class="lightbox-prev" aria-label="Anterior">‹</button>
+      <img class="lightbox-img" src="" alt="">
+      <button class="lightbox-next" aria-label="Siguiente">›</button>
+      <div class="lightbox-caption"></div>
+    </div>
+  `;
+  document.body.appendChild(lb);
+
+  const overlay = lb;
+  const imgEl = lb.querySelector(".lightbox-img");
+  const btnClose = lb.querySelector(".lightbox-close");
+  const btnPrev = lb.querySelector(".lightbox-prev");
+  const btnNext = lb.querySelector(".lightbox-next");
+  const caption = lb.querySelector(".lightbox-caption");
+
+  let gallery = []; // array de srcs o items {src, title}
+  let current = 0;
+
+  function openLightboxFromArray(arr, startIndex = 0) {
+    gallery = Array.isArray(arr) ? arr.slice() : [];
+    current = Math.max(0, Math.min(startIndex, gallery.length - 1));
+    showCurrent();
+    overlay.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove("show");
+    document.body.style.overflow = "";
+    imgEl.src = "";
+  }
+
+  function showCurrent() {
+    if (!gallery.length) return;
+    const item = gallery[current];
+    // item puede ser string o {src, title}
+    const src = (typeof item === "string") ? item : (item.src || item.url || "");
+    const title = (typeof item === "object") ? (item.title || "") : "";
+    imgEl.src = src;
+    imgEl.alt = title || "";
+    caption.textContent = title ? `${current + 1} / ${gallery.length} · ${title}` : `${current + 1} / ${gallery.length}`;
+    // prefetch next/prev
+    const next = gallery[(current + 1) % gallery.length];
+    const prev = gallery[(current - 1 + gallery.length) % gallery.length];
+    if (next) (new Image()).src = (typeof next === "string" ? next : next.src);
+    if (prev) (new Image()).src = (typeof prev === "string" ? prev : prev.src);
+  }
+
+  function next() { if (!gallery.length) return; current = (current + 1) % gallery.length; showCurrent(); }
+  function prev() { if (!gallery.length) return; current = (current - 1 + gallery.length) % gallery.length; showCurrent(); }
+
+  // event handlers
+  btnClose.addEventListener("click", closeLightbox);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeLightbox();
+  });
+  btnNext.addEventListener("click", (e) => { e.stopPropagation(); next(); });
+  btnPrev.addEventListener("click", (e) => { e.stopPropagation(); prev(); });
+
+  document.addEventListener("keydown", (ev) => {
+    if (!overlay.classList.contains("show")) return;
+    if (ev.key === "Escape") closeLightbox();
+    if (ev.key === "ArrowRight") next();
+    if (ev.key === "ArrowLeft") prev();
+  });
+
+  // touch swipe (simple)
+  let startX = 0;
+  imgEl.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; });
+  imgEl.addEventListener("touchend", (e) => {
+    const endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : 0;
+    const dx = endX - startX;
+    if (Math.abs(dx) > 40) { if (dx < 0) next(); else prev(); }
+  });
+
+  /* ----------------- Integración con la galería existente ----------------- */
+  // 1) Hacer que cuando se haga click en una obra se abra el lightbox con todas sus imágenes
+  function attachLightboxToGallery() {
+    // cada .obra-card creado por renderObras contiene data-display-index
+    document.getElementById("obras-container")?.addEventListener("click", (e) => {
+      const card = e.target.closest(".obra-card");
+      if (!card) return;
+      const idx = Number(card.getAttribute("data-display-index"));
+      const obra = window.currentObras?.[idx];
+      if (!obra) return;
+      // Usar imágenes ya resueltas por resolveImagePath
+      const imgs = (obra.images || []).map(i => {
+        // si en tu JSON pones una propiedad highres, preferila:
+        if (obra.raw && obra.raw._highres && obra.raw._highres[i]) return obra.raw._highres[i];
+        return resolveImagePath(i);
+      }).filter(Boolean);
+      if (imgs.length === 0) return;
+      openLightboxFromArray(imgs, 0);
+    });
+  }
+
+  // 2) Adicional: abrir imagen individual del hero/swiper si se hace click (si querés)
+  function attachLightboxToHero() {
+    document.querySelectorAll(".hero-swiper .swiper-slide img").forEach((el, i) => {
+      el.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        const src = el.getAttribute("src") || el.dataset.src;
+        if (!src) return;
+        // podés también construir un array si querés varias slides
+        openLightboxFromArray([resolveImagePath(src)], 0);
+      });
+    });
+  }
+
+  // 3) Exponer para que se pueda llamar desde fuera si hace falta
+  window.LorenaLightbox = {
+    open: openLightboxFromArray,
+    close: closeLightbox,
+    attachToGallery: attachLightboxToGallery,
+    attachToHero: attachLightboxToHero
+  };
+
+  // inicializar cuando el DOM y app estén listos
+  // boot() ya llama setupModal / renderObras; una vez hecho eso, atachamos:
+  document.addEventListener("DOMContentLoaded", () => {
+    // retrasar un poco si renderObras es asíncrono
+    setTimeout(() => {
+      attachLightboxToGallery();
+      attachLightboxToHero();
+    }, 300);
+  });
+})();
+
 });
