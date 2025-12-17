@@ -63,7 +63,7 @@
     "size": "80 cm x 90 cm",
     "price": "Consultar precio",
     "description": "Una representación emotiva del vínculo entre madre e hijo en el mundo marino.",
-    "images": ["abrazo1.png", "abrazo2.png"]
+    "images": ["abrazo1.png"]
   },
   {
     "title": "Familia de Emperadores",
@@ -87,7 +87,7 @@
     "size": "61 cm x 45 cm de alto",
     "price": "USD 150",
     "description": "Dos lechuzas de campanario en detalle preciso. Técnica mixta.",
-    "images": ["owls1.png", "owls2.png"]
+    "images": ["owls2.png"]
   },
   {
     "title": "Two Barn Coloured Owls",
@@ -117,7 +117,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 50",
     "description": "Búho en tonos oscuros y místicos.",
-    "images": ["buho1.png", "buho2.png"]
+    "images": ["buho1.png"]
   },
   {
     "title": "Manzanas",
@@ -127,7 +127,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 60",
     "description": "Naturaleza muerta con manzanas rojas y verdes.",
-    "images": ["manzanas1.png", "manzanas2.png"]
+    "images": ["manzanas1.png"]
   },
   {
     "title": "Amistad",
@@ -147,7 +147,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 55",
     "description": "Un ave exótica en tonos azules vibrantes.",
-    "images": ["aveazul1.png", "aveazul2.png"]
+    "images": ["aveazul1.png"]
   },
   {
     "title": "Bote Aguamarina",
@@ -177,7 +177,7 @@
     "size": "24 cm x 32 cm",
     "price": "USD 25",
     "description": "Faro costero guiando a los navegantes.",
-    "images": ["faro1.png", "faro2.png"]
+    "images": ["faro1.png"]
   },
   {
     "title": "TerrAq EcoJuego",
