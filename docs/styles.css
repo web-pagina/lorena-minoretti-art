@@ -947,3 +947,19 @@ body {
   cursor: zoom-in;
 }
 /* Fin lightbox */
+
+.obra-description {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.obra-features {
+  margin: 12px 0 18px 0;
+  padding-left: 22px;
+  color: #333;
+}
+
+.obra-features li {
+  margin-bottom: 6px;
+}
