@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <p style="font-style:italic; margin-top:10px;">
-        Las postales se venden en packs y se coordina selección por WhatsApp.
+        Las postales se venden en packs o de manera individual y se coordina selección por WhatsApp.
       </p>
 
       <a class="btn-whatsapp"
