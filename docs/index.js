@@ -8,13 +8,33 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ----------------- Menú mobile ----------------- */
   const menuToggle = document.getElementById("menu-toggle");
   const navbar = document.getElementById("navbar");
+
   if (menuToggle && navbar) {
     menuToggle.addEventListener("click", () => {
       navbar.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", navbar.classList.contains("open"));
+      const isOpen = navbar.classList.contains("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+
+      // Evitar scroll de fondo cuando el menú está abierto (mejora UX)
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
+
+    // Cerrar al clicar un enlace del menú móvil
     navbar.addEventListener("click", (e) => {
-      if (e.target.tagName === "A") navbar.classList.remove("open");
+      if (e.target.tagName === "A") {
+        navbar.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+    });
+
+    // Cerrar con Escape por accesibilidad
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && navbar.classList.contains("open")) {
+        navbar.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
     });
   }
 
