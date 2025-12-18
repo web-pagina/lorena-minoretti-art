@@ -82,6 +82,49 @@ body {
   align-items: center;
   position: relative;
 }
+/* --- NAV: asegurar contenedor relativo y centrar enlaces --- */
+.main-navigation .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra horizontalmente los links */
+  position: relative;      /* necesario para que el botón absolute quede dentro */
+  gap: 20px;
+  width: 100%;
+}
+
+/* mantener los links centrados */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+/* botón hamburguesa: lo dejamos absolute pero dentro del nav-container */
+.menu-toggle {
+  display: none; /* visible sólo en mobile (se controla por media queries) */
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #666;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2000;
+}
+
+/* Mobile: mostrar botón y ocultar links */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .mobile-menu.open { display: block; }
+}
 
 /* Mostrar menú desktop */
 .nav-links {
