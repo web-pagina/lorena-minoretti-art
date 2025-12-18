@@ -6,37 +6,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const BASE = ""; // Ya no necesitamos detectar, el <base> lo resuelve
 
   /* ----------------- Menú mobile ----------------- */
+  /* ----------------- Menú mobile (un único listener, robusto) ----------------- */
   const menuToggle = document.getElementById("menu-toggle");
   const navbar = document.getElementById("navbar");
-
   if (menuToggle && navbar) {
     menuToggle.addEventListener("click", () => {
       navbar.classList.toggle("open");
-      const isOpen = navbar.classList.contains("open");
-      menuToggle.setAttribute("aria-expanded", isOpen);
-
-      // Evitar scroll de fondo cuando el menú está abierto (mejora UX)
-      document.body.style.overflow = isOpen ? "hidden" : "";
+      menuToggle.setAttribute("aria-expanded", navbar.classList.contains("open"));
     });
 
-    // Cerrar al clicar un enlace del menú móvil
+    // cerrar menú móvil al hacer click en un link
     navbar.addEventListener("click", (e) => {
       if (e.target.tagName === "A") {
         navbar.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
-      }
-    });
-
-    // Cerrar con Escape por accesibilidad
-    document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape" && navbar.classList.contains("open")) {
-        navbar.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
       }
     });
   }
+
 
   /* ----------------- Hero Swiper ----------------- */
   try {

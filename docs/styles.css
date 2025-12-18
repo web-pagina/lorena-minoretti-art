@@ -57,11 +57,6 @@ body {
   z-index: 100;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
 
 .nav-links a {
   color: #666;
@@ -75,13 +70,7 @@ body {
   color: #333;
 }
 
-/* NAV container fix */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
+
 /* --- NAV: asegurar contenedor relativo y centrar enlaces --- */
 .main-navigation .nav-container {
   display: flex;
@@ -131,14 +120,84 @@ body {
   display: flex;
   gap: 40px;
 }
+/* --- NAV: asegurar contenedor relativo y centrar enlaces en desktop --- */
+.main-navigation .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra los enlaces */
+  position: relative;      /* necesario para colocar el botón hamburguesa */
+  width: 100%;
+  gap: 20px;
+}
 
-/* Botón hamburguesa oculto por defecto */
+/* Links de navegación (desktop) */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+/* Botón hamburguesa */
 .menu-toggle {
-  display: none;
+  display: none; /* aparece sólo en mobile */
   background: none;
   border: none;
   font-size: 1.8em;
+  color: #666;
   cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* MENU MOBILE lateral */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background: white;
+  display: none;
+  flex-direction: column;
+  padding-top: 100px;
+  gap: 20px;
+  text-align: center;
+  z-index: 5000;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+  transition: transform .25s ease;
+  transform: translateX(100%);
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  font-size: 1.1em;
+  color: #666;
+}
+
+.mobile-menu a:hover {
+  color: #333;
+}
+
+/* VERSIÓN MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
 }
 
 /* MENU MÓVIL */
