@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <a class="btn-whatsapp"
         href="https://wa.me/5491167852021?text=${encodeURIComponent("Hola Lorena, me interesan las postales: " + obra.title)}"
-        target="_blank">Consultarme por packs</a>
+        target="_blank">Solicitar información sobre packs</a>
     `;
   }
 
